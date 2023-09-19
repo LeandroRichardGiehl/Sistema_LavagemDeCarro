@@ -46,11 +46,11 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         JLabel.setForeground(new java.awt.Color(255, 255, 255));
         JLabel.setText("NOME");
-        getContentPane().add(JLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 40, 20));
+        getContentPane().add(JLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 60, 20));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DATA DE NASCIMENTO");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, 30));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SOBRENOME");
@@ -58,7 +58,7 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CEP");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 470, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("SEXO");
@@ -66,14 +66,14 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("TELEFONE");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, -1, 20));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, -1, 20));
 
         Nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NomeActionPerformed(evt);
             }
         });
-        getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 220, 130, -1));
+        getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 180, -1));
 
         Sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Homem", "Mulher", "Outros" }));
         Sexo.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +81,7 @@ public class CadastroCliente extends javax.swing.JFrame {
                 SexoActionPerformed(evt);
             }
         });
-        getContentPane().add(Sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 130, -1));
+        getContentPane().add(Sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 180, -1));
 
         try {
             DataDeNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
@@ -94,21 +94,21 @@ public class CadastroCliente extends javax.swing.JFrame {
                 DataDeNascimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(DataDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 130, -1));
+        getContentPane().add(DataDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 440, 180, -1));
 
         try {
             Telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(+55 ##) # ####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 370, 130, -1));
+        getContentPane().add(Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 180, -1));
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 480, 130, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 180, -1));
 
         jButton1.setText("Próximo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -116,14 +116,14 @@ public class CadastroCliente extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 540, -1, -1));
 
         Sobrenome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 SobrenomeActionPerformed(evt);
             }
         });
-        getContentPane().add(Sobrenome, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 130, -1));
+        getContentPane().add(Sobrenome, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, 180, -1));
 
         ImagemFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/img/imgFundo.png"))); // NOI18N
         getContentPane().add(ImagemFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 580));

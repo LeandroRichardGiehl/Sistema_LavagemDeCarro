@@ -26,8 +26,15 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem3 = new javax.swing.JMenuItem();
         jLabel1 = new javax.swing.JLabel();
         ImagemDeFundo = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        Cadastro = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+
+        jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -37,7 +44,19 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 60, -1));
 
         ImagemDeFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/img/AgendamentoTela.png"))); // NOI18N
-        getContentPane().add(ImagemDeFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, -1));
+        getContentPane().add(ImagemDeFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 530));
+
+        Cadastro.setText("Cadastro");
+
+        jMenuItem2.setText("Cliente");
+        Cadastro.add(jMenuItem2);
+
+        jMenuBar1.add(Cadastro);
+
+        jMenu2.setText("Suporte");
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -78,7 +97,12 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu Cadastro;
     private javax.swing.JLabel ImagemDeFundo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables
 }

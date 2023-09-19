@@ -45,49 +45,49 @@ public class CadastroCarro extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("MODELO");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 270, 50, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 260, 80, -1));
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("COR");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 370, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 380, -1, -1));
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("ANO");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 320, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 320, -1, -1));
 
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("PLACA");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 450, -1, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("MARCA");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 220, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 190, -1, -1));
 
         try {
             PlacaDoCarro.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(PlacaDoCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 440, 120, -1));
+        getContentPane().add(PlacaDoCarro, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 470, 180, -1));
 
         Marca.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MarcaActionPerformed(evt);
             }
         });
-        getContentPane().add(Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 240, 120, -1));
+        getContentPane().add(Marca, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 180, -1));
 
         Modelo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ModeloActionPerformed(evt);
             }
         });
-        getContentPane().add(Modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 290, 120, -1));
-        getContentPane().add(Ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 340, 120, -1));
+        getContentPane().add(Modelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 180, -1));
+        getContentPane().add(Ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 180, -1));
 
-        jButton1.setText("Próximo");
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, -1, -1));
-        getContentPane().add(Cor, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 390, 120, -1));
+        jButton1.setText("cadastrar");
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 530, -1, -1));
+        getContentPane().add(Cor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 180, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/img/CadastroCarro.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
