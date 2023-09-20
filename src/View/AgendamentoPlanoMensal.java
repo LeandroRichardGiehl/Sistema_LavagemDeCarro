@@ -9,6 +9,8 @@ package View;
  * @author richa
  */
 public class AgendamentoPlanoMensal extends javax.swing.JFrame {
+    Cliente cliente = new Cliente();
+    CadastroCliente cad_cliente;
 
     /**
      * Creates new form AgendamentoPlanoMensal
@@ -45,7 +47,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cartão de Crédito", "Pix", "Boleto" }));
-        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 240, 130, -1));
+        getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 240, 170, -1));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Normal: 2lavagens - $100", "Premium: 3lavagens - $150", "Deluxe: 4lavagens - $200" }));
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -53,11 +55,11 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, 130, -1));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(92, 170, 170, -1));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("FORMA DE PAGAMENTO");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 140, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 220, 140, -1));
 
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("AGENDAR LAVAGEM");
@@ -65,7 +67,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("PLANOS DE ASSINATURA");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 150, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 140, -1));
 
         jButton1.setText("Pagar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -73,7 +75,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, -1, -1));
 
         ImagemDeFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/img/AgendamentoTela.png"))); // NOI18N
         getContentPane().add(ImagemDeFundo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 530));
@@ -107,8 +109,9 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        CadastroCliente c = new CadastroCliente();
-        c.setVisible(true);
+        cad_cliente = new CadastroCliente();
+        cad_cliente.menu = this;
+        cad_cliente.setVisible(true);
         // TODO add your handling code here:          
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 

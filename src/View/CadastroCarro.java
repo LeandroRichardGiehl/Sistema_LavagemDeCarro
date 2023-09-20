@@ -4,11 +4,15 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author richa
  */
 public class CadastroCarro extends javax.swing.JFrame {
+        AgendamentoPlanoMensal menu;
+        Carro car;
 
     /**
      * Creates new form CadastroCarro
@@ -45,7 +49,7 @@ public class CadastroCarro extends javax.swing.JFrame {
 
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("MODELO");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 50, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 60, -1));
 
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("COR");
@@ -109,8 +113,10 @@ public class CadastroCarro extends javax.swing.JFrame {
     }//GEN-LAST:event_ModeloActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        AgendamentoPlanoMensal a = new AgendamentoPlanoMensal();
-        a.setVisible(true);
+        //Carro car = new Carro();
+        JOptionPane.showMessageDialog(null, "Cadastro feito com sucesso");
+        this.dispose();
+        
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 

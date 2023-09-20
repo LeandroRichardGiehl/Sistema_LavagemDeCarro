@@ -9,12 +9,15 @@ package View;
  * @author richa
  */
 public class CadastroCliente extends javax.swing.JFrame {
-
+    Cliente cliente;
+    AgendamentoPlanoMensal menu;
+    CadastroCarro cad_car;
     /**
      * Creates new form Cadastro
      */
     public CadastroCliente() {
         initComponents();
+        
     }
 
     /**
@@ -36,8 +39,8 @@ public class CadastroCliente extends javax.swing.JFrame {
         Sexo = new javax.swing.JComboBox<>();
         DataDeNascimento = new javax.swing.JFormattedTextField();
         Telefone = new javax.swing.JFormattedTextField();
-        jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
         Sobrenome = new javax.swing.JTextField();
         ImagemFundo = new javax.swing.JLabel();
 
@@ -50,7 +53,7 @@ public class CadastroCliente extends javax.swing.JFrame {
 
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("DATA DE NASCIMENTO");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, -1, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, 30));
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("SOBRENOME");
@@ -103,13 +106,6 @@ public class CadastroCliente extends javax.swing.JFrame {
         }
         getContentPane().add(Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 180, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 180, -1));
-
         jButton1.setText("Próximo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -117,6 +113,18 @@ public class CadastroCliente extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 540, -1, -1));
+
+        try {
+            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###.")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        jFormattedTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jFormattedTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jFormattedTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 490, 180, -1));
 
         Sobrenome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -147,15 +155,16 @@ public class CadastroCliente extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_DataDeNascimentoActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        CadastroCarro cc = new CadastroCarro();
-        cc.setVisible(true);
+        cad_car = new CadastroCarro();
+        cad_car.setVisible(true);
+        this.dispose();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jFormattedTextField1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -202,12 +211,12 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JTextField Sobrenome;
     private javax.swing.JFormattedTextField Telefone;
     private javax.swing.JButton jButton1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 
     private CadastroCarro CadastroCarro() {
