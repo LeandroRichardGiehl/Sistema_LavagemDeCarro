@@ -86,6 +86,11 @@ public class CadastroCarro extends javax.swing.JFrame {
         getContentPane().add(Ano, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 180, -1));
 
         jButton1.setText("cadastrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 530, -1, -1));
         getContentPane().add(Cor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 180, -1));
 
@@ -102,6 +107,12 @@ public class CadastroCarro extends javax.swing.JFrame {
     private void ModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModeloActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ModeloActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        AgendamentoPlanoMensal a = new AgendamentoPlanoMensal();
+        a.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
