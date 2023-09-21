@@ -4,6 +4,8 @@
  */
 package View;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author richa
@@ -11,7 +13,6 @@ package View;
 public class CadastroCliente extends javax.swing.JFrame {
     Cliente cliente;
     AgendamentoPlanoMensal menu;
-    CadastroCarro cad_car;
     /**
      * Creates new form Cadastro
      */
@@ -156,10 +157,9 @@ public class CadastroCliente extends javax.swing.JFrame {
     }//GEN-LAST:event_DataDeNascimentoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        cad_car = new CadastroCarro();
-        cad_car.setVisible(true);
-        this.dispose();
-        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Cadastro feito com sucesso");
+        this.dispose();        
+// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jFormattedTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFormattedTextField1ActionPerformed
@@ -218,8 +218,4 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     // End of variables declaration//GEN-END:variables
-
-    private CadastroCarro CadastroCarro() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }

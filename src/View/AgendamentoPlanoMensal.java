@@ -11,6 +11,7 @@ package View;
 public class AgendamentoPlanoMensal extends javax.swing.JFrame {
     Cliente cliente = new Cliente();
     CadastroCliente cad_cliente;
+    CadastroCarro cad_carro;
 
     /**
      * Creates new form AgendamentoPlanoMensal
@@ -39,6 +40,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         Cadastro = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jMenuItem3.setText("jMenuItem3");
@@ -90,6 +92,14 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         });
         Cadastro.add(jMenuItem2);
 
+        jMenuItem1.setText("Carro");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        Cadastro.add(jMenuItem1);
+
         jMenuBar1.add(Cadastro);
 
         jMenu2.setText("Suporte");
@@ -114,6 +124,13 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         cad_cliente.setVisible(true);
         // TODO add your handling code here:          
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        cad_carro = new CadastroCarro();
+        cad_carro.menu = this;
+        cad_carro.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,6 +179,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     // End of variables declaration//GEN-END:variables

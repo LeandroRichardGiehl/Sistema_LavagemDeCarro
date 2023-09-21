@@ -13,7 +13,6 @@ import javax.swing.JOptionPane;
 public class CadastroCarro extends javax.swing.JFrame {
         AgendamentoPlanoMensal menu;
         Carro car;
-
     /**
      * Creates new form CadastroCarro
      */
@@ -104,21 +103,20 @@ public class CadastroCarro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void MarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_MarcaActionPerformed
-
-    private void ModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModeloActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ModeloActionPerformed
-
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //Carro car = new Carro();
         JOptionPane.showMessageDialog(null, "Cadastro feito com sucesso");
         this.dispose();
         
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void ModeloActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ModeloActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ModeloActionPerformed
+
+    private void MarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MarcaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_MarcaActionPerformed
 
     /**
      * @param args the command line arguments
