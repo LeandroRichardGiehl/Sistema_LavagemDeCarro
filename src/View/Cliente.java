@@ -26,7 +26,7 @@ public class Cliente {
       this.endereco = "";
   }
    
-   public Cliente (String nome, String sobrenome, String sexo, String telefone, String dataDeNascimento, String endereco){
+   public Cliente (String nome, String sobrenome){
        this.nome = nome;
        this.sobrenome = sobrenome;
        this.sexo = sexo;
@@ -35,6 +35,8 @@ public class Cliente {
        this.endereco = endereco;
        this.car = null;
    }
+
+
    
     public String getNome(){
         return this.nome;    

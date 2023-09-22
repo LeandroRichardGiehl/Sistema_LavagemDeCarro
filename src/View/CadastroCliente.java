@@ -36,10 +36,10 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        Nome = new javax.swing.JTextField();
-        Sexo = new javax.swing.JComboBox<>();
-        DataDeNascimento = new javax.swing.JFormattedTextField();
-        Telefone = new javax.swing.JFormattedTextField();
+        nome = new javax.swing.JTextField();
+        sexo = new javax.swing.JComboBox<>();
+        dataDeNascimento = new javax.swing.JFormattedTextField();
+        telefone = new javax.swing.JFormattedTextField();
         jButton1 = new javax.swing.JButton();
         jFormattedTextField1 = new javax.swing.JFormattedTextField();
         Sobrenome = new javax.swing.JTextField();
@@ -72,40 +72,40 @@ public class CadastroCliente extends javax.swing.JFrame {
         jLabel3.setText("TELEFONE");
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, -1, 20));
 
-        Nome.addActionListener(new java.awt.event.ActionListener() {
+        nome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                NomeActionPerformed(evt);
+                nomeActionPerformed(evt);
             }
         });
-        getContentPane().add(Nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 180, -1));
+        getContentPane().add(nome, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 180, -1));
 
-        Sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Homem", "Mulher", "Outros" }));
-        Sexo.addActionListener(new java.awt.event.ActionListener() {
+        sexo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Homem", "Mulher", "Outros" }));
+        sexo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SexoActionPerformed(evt);
+                sexoActionPerformed(evt);
             }
         });
-        getContentPane().add(Sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 180, -1));
+        getContentPane().add(sexo, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 180, -1));
 
         try {
-            DataDeNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+            dataDeNascimento.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        DataDeNascimento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        DataDeNascimento.addActionListener(new java.awt.event.ActionListener() {
+        dataDeNascimento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        dataDeNascimento.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DataDeNascimentoActionPerformed(evt);
+                dataDeNascimentoActionPerformed(evt);
             }
         });
-        getContentPane().add(DataDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 440, 180, -1));
+        getContentPane().add(dataDeNascimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 440, 180, -1));
 
         try {
-            Telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(+55 ##) # ####-####")));
+            telefone.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(+55 ##) # ####-####")));
         } catch (java.text.ParseException ex) {
             ex.printStackTrace();
         }
-        getContentPane().add(Telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 180, -1));
+        getContentPane().add(telefone, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 380, 180, -1));
 
         jButton1.setText("Próximo");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -140,25 +140,26 @@ public class CadastroCliente extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void NomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NomeActionPerformed
+    private void nomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nomeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_NomeActionPerformed
+    }//GEN-LAST:event_nomeActionPerformed
 
     private void SobrenomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SobrenomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_SobrenomeActionPerformed
 
-    private void SexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SexoActionPerformed
+    private void sexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sexoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_SexoActionPerformed
+    }//GEN-LAST:event_sexoActionPerformed
 
-    private void DataDeNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DataDeNascimentoActionPerformed
+    private void dataDeNascimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dataDeNascimentoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_DataDeNascimentoActionPerformed
+    }//GEN-LAST:event_dataDeNascimentoActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane.showMessageDialog(null, "Cadastro feito com sucesso");
-        this.dispose();        
+        this.dispose(); 
+        this.menu.gravaUsuario(cliente);
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -203,13 +204,10 @@ public class CadastroCliente extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JFormattedTextField DataDeNascimento;
     private javax.swing.JLabel ImagemFundo;
     private javax.swing.JLabel JLabel;
-    private javax.swing.JTextField Nome;
-    private javax.swing.JComboBox<String> Sexo;
     private javax.swing.JTextField Sobrenome;
-    private javax.swing.JFormattedTextField Telefone;
+    private javax.swing.JFormattedTextField dataDeNascimento;
     private javax.swing.JButton jButton1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
@@ -217,5 +215,8 @@ public class CadastroCliente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField nome;
+    private javax.swing.JComboBox<String> sexo;
+    private javax.swing.JFormattedTextField telefone;
     // End of variables declaration//GEN-END:variables
 }
