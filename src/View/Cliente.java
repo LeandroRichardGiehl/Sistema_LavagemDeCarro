@@ -26,36 +26,58 @@ public class Cliente {
       this.endereco = "";
   }
    
-   public Cliente (String nome, String sobrenome){
+   public Cliente(String nome, String sobrenome, String sexo, String telefone, String dtnasc, String end){
        this.nome = nome;
        this.sobrenome = sobrenome;
        this.sexo = sexo;
        this.telefone = telefone;
-       this.dataDeNascimento = dataDeNascimento;
-       this.endereco = endereco;
+       this.dataDeNascimento = dtnasc;
+       this.endereco = end;
        this.car = null;
    }
-
-
+   
+    public void setNome(String nome){
+        this.nome = nome;
+    }
    
     public String getNome(){
         return this.nome;    
+    }
+    
+    public void setSobrenome(String sobrenome){
+        this.sobrenome = sobrenome;
     }
     
     public String getSobrenome(){
         return this.sobrenome;     
     } 
     
+    public void setSexo(String sexo){
+        this.sexo = sexo;
+    }
+    
     public String getSexo(){
         return this.sexo;
+    }
+    
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
     }
     
     public String getTelefone(){
         return this.telefone;
     }
     
+    public void setDataNascimento(String dataNascimento){
+        this.dataDeNascimento = dataNascimento;
+    }
+    
     public String getDataNascimento(){
         return this.dataDeNascimento;
+    }
+    
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
     }
     
     public String getEndereco(){
@@ -71,7 +93,7 @@ public class Cliente {
     }
  
     public String todoOsDados(){
-        return "Nome e Sobrenome: "+this.nome+" "+this.sobrenome+" Sexo: "+this.sexo+"  Telefone: "+this.telefone+" Data de Nascimento: "+this.dataDeNascimento+" Edereço: "+this.endereco+" Carro: "+this.car;
+        return "Nome e Sobrenome: "+getNome()+" "+getSobrenome()+" Sexo: "+getSexo()+"  Telefone: "+getTelefone();
     }
     
 }

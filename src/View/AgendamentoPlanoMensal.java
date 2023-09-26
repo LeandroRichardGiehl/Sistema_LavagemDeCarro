@@ -111,7 +111,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
 
         jScrollPane1.setViewportView(jList1);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 210, 310, 180));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, 310, 180));
 
         try {
             jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/2023")));
@@ -179,18 +179,19 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
-       public void atualizarUsuario(){
+    public void atualizarUsuario(){
         model.addElement(this.cliente.todoOsDados());
         jList1.setModel(model);
     }
        
-        public void gravarCarro(Carro car){
+    public void gravarCarro(Carro car){
         this.cliente.setCarro(car);
         atualizarUsuario();
     }
         
-        public void gravaUsuario(Cliente c){
+    public void gravaUsuario(Cliente c){
         cliente = c;
+        atualizarUsuario();
     }
     
     /**

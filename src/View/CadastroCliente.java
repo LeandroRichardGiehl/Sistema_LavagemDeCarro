@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  * @author richa
  */
 public class CadastroCliente extends javax.swing.JFrame {
-    Cliente cliente;
+
     AgendamentoPlanoMensal menu;
     /**
      * Creates new form Cadastro
@@ -158,8 +158,15 @@ public class CadastroCliente extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         JOptionPane.showMessageDialog(null, "Cadastro feito com sucesso");
-        this.dispose(); 
+        Cliente cliente = new Cliente();
+        cliente.setNome(nome.getText());
+        cliente.setSobrenome(Sobrenome.getText());
+        cliente.setSexo(sexo.getSelectedItem().toString());
+        cliente.setTelefone(telefone.getText());
+        cliente.setDataNascimento(dataDeNascimento.getText());
+        cliente.setEndereco(jFormattedTextField1.getText());
         this.menu.gravaUsuario(cliente);
+        this.dispose(); 
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
