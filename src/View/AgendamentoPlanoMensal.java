@@ -16,6 +16,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
     Cliente cliente = new Cliente();
     CadastroCliente cad_cliente;
     CadastroCarro cad_carro;
+    Suporte sup;
 
     /**
      * Creates new form AgendamentoPlanoMensal
@@ -53,6 +54,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
 
         jMenuItem3.setText("jMenuItem3");
 
@@ -125,6 +127,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
 
         Cadastro.setText("Cadastro");
 
+        jMenuItem2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/img/cliente-icon.png"))); // NOI18N
         jMenuItem2.setText("Cliente");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -133,6 +136,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         });
         Cadastro.add(jMenuItem2);
 
+        jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/img/carro-esporte (1).png"))); // NOI18N
         jMenuItem1.setText("Carro");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -144,6 +148,16 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         jMenuBar1.add(Cadastro);
 
         jMenu2.setText("Suporte");
+
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/View/img/agenda-icon.png"))); // NOI18N
+        jMenuItem4.setText("Suporte");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
+
         jMenuBar1.add(jMenu2);
 
         setJMenuBar(jMenuBar1);
@@ -178,6 +192,12 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Agendado efetuado com sucesso.");
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        sup = new Suporte();
+        sup.setVisible(true);
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     public void atualizarUsuario(){
         model.addElement(this.cliente.todoOsDados());
@@ -250,6 +270,7 @@ public class AgendamentoPlanoMensal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 

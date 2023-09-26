@@ -188,7 +188,5 @@ public class CadastroCarro extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField marca;
-    private javax.swing.JTextField marca1;
     // End of variables declaration//GEN-END:variables
 }
